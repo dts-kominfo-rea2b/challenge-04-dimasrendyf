@@ -10,7 +10,7 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, index) => {
   convertSeconds = dates.map(date => new Date(date).getTime() / 1000);
-  if (!index) {
+  if (index == null) {
     return convertSeconds.sort().join('-');
   } else {
     return convertSeconds[index].toString();
