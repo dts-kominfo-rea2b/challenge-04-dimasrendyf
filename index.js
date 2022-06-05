@@ -11,7 +11,7 @@ const dates = [
 const createDate = (dates, index) => {
   convertSeconds = dates.map(date => new Date(date).getTime() / 1000);
   if (!index) {
-    return convertSeconds.join('-').toString();
+    return convertSeconds.sort().join('-').toString();
   } else {
     return convertSeconds[index].toString();
   }
